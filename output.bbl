@@ -1,0 +1,39 @@
+\begin{thebibliography}{1}
+
+\bibitem{adem1998cohomology}
+Alejandro Adem and Nadim Naffah.
+\newblock On the cohomology of $\mathbf{SL}_2 (\mathbb{Z}[1/p])$.
+\newblock {\em London Mathematical society lecture note series}, pages 1--9,
+  1998.
+
+\bibitem{brown2012cohomology}
+Kenneth~S Brown.
+\newblock {\em Cohomology of groups}, volume~87.
+\newblock Springer Science \& Business Media, 2012.
+
+\bibitem{bui2014homology}
+Anh~Tuan Bui and Graham Ellis.
+\newblock The homology of $\mathbf{SL}_2 (\mathbb{Z}[1/m])$ for small m.
+\newblock {\em Journal of Algebra}, 408:102--108, 2014.
+
+\bibitem{cohen1989combinatorial}
+Daniel~E Cohen and Daniel~Ellis Cohen.
+\newblock {\em Combinatorial group theory: a topological approach}, volume~14.
+\newblock Cambridge University Press, 1989.
+
+\bibitem{hatcher2002topology}
+Allen Hatcher.
+\newblock Topology of numbers.
+\newblock {\em Unpublished manuscript, in preparation}, 2002.
+
+\bibitem{knudson2012homology}
+Kevin~P Knudson.
+\newblock {\em Homology of linear groups}, volume 193.
+\newblock Birkh{\"a}user, 2012.
+
+\bibitem{lyndon2015combinatorial}
+Roger~C Lyndon and Paul~E Schupp.
+\newblock {\em Combinatorial group theory}.
+\newblock Springer, 2015.
+
+\end{thebibliography}

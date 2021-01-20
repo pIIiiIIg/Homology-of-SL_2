@@ -1,0 +1,60 @@
+\newpage
+\section{The Homology of $SL_2(\mathbb{Z})$ }
+
+In this chapter we will calculate the homology of $SL_2(\mathbb{Z})$. To begin with, we must analyze the group structure of $SL_2(\mathbb{Z})$ via its action on the Farey Tree.
+
+\input{Fareytree}
+
+\subsection{The Homology of $SL_2(\mathbb{Z})$}
+Now we can calculate the homology of the linear group, $SL_2(\mathbb{Z})$.
+\par
+We proved the theorem \ref{thmain} in last section:
+\[
+S L_{2}(\mathbb{Z}) \cong \mathbb{Z} / 4 *_{\mathbb{Z} / 2} \mathbb{Z} / 6
+\]
+\par
+Now consider the map $S L_{2}(\mathbb{Z}) \rightarrow \mathbb{Z} / 12$ defined by sending the generator of $\mathbb{Z} / 4$ to 3 mod 12 and the generator of $\mathbb{Z} / 6$ to 2 mod 12
+\begin{theorem}
+\label{thm3}
+The $\operatorname{map} S L_{2}(\mathbb{Z}) \longrightarrow \mathbb{Z} / 12$ induces an isomorphism in integral homology:
+\[
+H_{i}\left(S L_{2}(\mathbb{Z}), \mathbb{Z}\right) \cong H_{i}(\mathbb{Z} / 12, \mathbb{Z}) \cong\left\{\begin{array}{ll}
+\mathbb{Z} & i=0 \\
+\mathbb{Z} / 12 & i \text { odd } \\
+0 & i \text { even }
+\end{array}\right.
+\]
+\end{theorem}
+\begin{proof}
+Associated to any decomposition $G=G_{1} *_{A} G_{2},$ there is a Mayer-Vietoris sequence as to corollary \ref{cor1}
+\[
+\cdots \rightarrow H_{i}(A) \rightarrow H_{i}\left(G_{1}\right) \oplus H_{i}\left(G_{2}\right) \rightarrow H_{i}(G) \rightarrow H_{i-1}(A) \rightarrow \cdots
+\]
+The homology of a cyclic group $\mathbb{Z} / n$ is given by example \ref{example1}
+\[
+H_{i}(\mathbb{Z} / n, \mathbb{Z})=\left\{\begin{array}{ll}
+\mathbb{Z} & i=0 \\
+\mathbb{Z} / n & i \text { odd } \\
+0 & i \text { even }
+\end{array}\right.
+\]
+Moreover, it is easy to see that if $\mathbb{Z} / n \rightarrow \mathbb{Z} /(n m)$ is the inclusion $1 \mapsto m,$ then the map $H_{2 i-1}(\mathbb{Z} / n) \rightarrow H_{2 i-1}(\mathbb{Z} /(n m))$ is the same inclusion that maps the identity 1 in the torsion part $\mathbb{Z} / n$ to m in $\mathbb{Z} / (n m)$. For example, in the following figure \ref{fig:my_label} we calculate the case $\mathbb{Z} / 2\hookrightarrow\mathbb{Z} /4$.
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.2]{injection.jpg}
+    \caption{$\mathbb{Z} / 2\hookrightarrow\mathbb{Z} /4$}
+    \label{fig:my_label}
+\end{figure}
+\newpage
+It follows that the sequence for computing $H .\left(S L_{2}(\mathbb{Z})\right)$ has the following form:
+\[
+0 \rightarrow H_{2 i}\left(S L_{2}(\mathbb{Z})\right) \rightarrow \mathbb{Z} / 2 \rightarrow \mathbb{Z} / 4 \oplus \mathbb{Z} / 6 \rightarrow H_{2 i-1}\left(S L_{2}(\mathbb{Z})\right) \rightarrow 0
+\]
+$\operatorname{since} H_{2 i}(\mathbb{Z} / n)=0$ for all $n, i \geq 1 .$ Note that the $\operatorname{map} \mathbb{Z} / 2 \rightarrow \mathbb{Z} / 4 \oplus \mathbb{Z} / 6$ is
+injective so that $H_{2 i}\left(S L_{2}(\mathbb{Z})\right)=0$ for $i \geq 1$ and $H_{2 i-1}\left(S L_{2}(\mathbb{Z})\right)$ has order 12 One checks easily that $H_{2 i-1}\left(S L_{2}(\mathbb{Z})\right)$ is in fact cyclic with generator $(1,2)$ .
+\end{proof}
+
+\begin{remark}
+For other arithmetic linear groups, like the cohomology of $SL_2(\mathbb{Z}[1/p])$ for p prime, it was completely calculated by A. Adem and M. Naffah in \cite{adem1998cohomology}. The homology of $SL_2(\mathbb{Z}[1/m])$ for small m can be computed using a kind of algorithm introduced in \cite{bui2014homology}. For further information on the homology of $SL_2(R)$ for R being one dimensional ring, one can refer to Chapter.4 of \cite{knudson2012homology} and its Chapter.5 for further application of these results.
+\end{remark}
+

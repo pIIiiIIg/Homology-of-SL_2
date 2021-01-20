@@ -1,0 +1,99 @@
+\newpage
+\subsection{The Homology of Amalgamated Free Products}
+\begin{definition}
+Suppose we are given groups $G_{1}, G_{2},$ and $A$ and homomorphisms $\alpha_{1}:$ $A \rightarrow G_{1}$ and $\alpha_{2}: A \rightarrow G_{2} .$ By the amalgamated free product (or amalgamated sum, or amalgam) of $G_{1}$ and $G_{2}$ along $A$ we mean a group $G$ which fits into a commutative square
+\begin{equation}
+\label{sq}
+\xymatrix{
+A \ar[d]^{\alpha_1} \ar[r]^{\alpha_2} &G_2 \ar[d]^{\beta_2}\\
+G_1\ar[r]^{\beta_1} & G}
+\end{equation}
+\par
+with the following universal mapping property: Given a group $H$ and homomorphisms $\gamma_{i}: G_{i} \rightarrow H(i=1,2)$ with $\gamma_{1} \alpha_{1}=\gamma_{2} \alpha_{2},$ there is a unique map
+$\varphi: G \rightarrow H$ such that $\varphi \beta_{i}=\gamma_{i} .$ We write $G=G_{1} *_{A} G_{2},$ and we say that the square \eqref{sq} is an amalgamation diagram.
+\end{definition}
+
+The universal property above shows that amalgamation is the group theoretic analogue of pasting two topological spaces together along a common subspace. The Seifert-van Kampen theorem, which the reader has probably seen in some form, makes the analogy precise via the $\pi_{1}$-functor. We will need the following simple version of that theorem:
+\begin{theorem}
+\label{thm_van}
+Let $X$ be a $C W$-complex which is the union of two connected subcomplexes $X_{1}$ and $X_{2}$ whose intersection $Y$ is connected and non-empty.
+Then the square
+$$
+\xymatrix{
+\pi_1 Y \ar[d] \ar[r] &\pi_1 X_2\ar[d]\\
+\pi_1 X_1\ar[r] & \pi_1 X}
+$$
+is an amalgamation diagram, where all fundamental groups are computed at a fixed vertex $y \in Y$ and all maps are induced by inclusions. Thus
+\[
+\pi_{1} X=\pi_{1} X_{1} *_{\pi_{1}Y} \pi_{1} X_{2}
+\]
+\end{theorem}
+\begin{proof}
+See \cite{cohen1989combinatorial}, cf.4.2, theorem 4.
+\end{proof}
+We can express this theorem more concisely by saying that the functor
+$$\pi_{1}:(\text { connected, pointed complexes }) \rightarrow(\text { groups })$$
+preserves amalgamations. In order to study the homology of amalgamations of groups, we would like to have a result going in the other direction, saying that the "functor" $K(-, 1):(\text { groups }) \rightarrow($ complexes) preserves amalgamations. This turns out to be true as long as the maps $\alpha_{1}$ and $\alpha_{2}$ of \eqref{sq} are injective:
+
+\begin{theorem}\label{thm2}{(Whitehead)}. 
+
+Any amalgamation diagram \eqref{sq} with $\alpha_{1}$ and $\alpha_{2}$ injective can be realized by a diagram
+$$
+\xymatrix{
+Y \ar@{^{(}->}[d] \ar@{^{(}->}[r] &X_2\ar@{^{(}->}[d]\\
+ X_1\ar@{^{(}->}[r] & X}
+$$
+of $K(\pi, 1)-$complexes such that $X=X_{1} \cup X_{2}$ and $Y=X_{1} \cap X_{2}$.
+\end{theorem}
+
+The proof will require three elementary lemmas:
+\begin{Lemma}
+\label{lemma1}
+If $\alpha_{1}$ and $\alpha_{2}$ are injective then so are $\beta_{1}$ and $\beta_{2} .$ Thus $G_{1}, G_{2},$ and $A$ can be regarded as subgroups of $G$.
+\end{Lemma}
+\begin{proof}
+See, \cite{lyndon2015combinatorial}, cf.IV.2, theorem 2.6.
+\end{proof}
+\begin{lemma}
+\label{lemma2}
+Let $X^{\prime}\hookrightarrow X$ be an inclusion of connected $C W$-complexes such that the induced map $\pi^{\prime} \rightarrow \pi$ of fundamental groups is injective. Let $p: \widetilde{X} \rightarrow X$ be the universal cover of $X .$ Then each connected component of $p^{-1} X^{\prime}$ is simply connected (hence it is a copy of the universal cover of $X^{\prime}$ ). Moreover, these components are permuted transitively by the action of $\pi$ on $\widetilde{X}$, and $\pi^{\prime}$ is the isotropy group of one of them; in other words, $\pi_{0}\left(p^{-1} X^{\prime}\right) \approx \pi / \pi^{\prime}$.
+\end{lemma}
+\begin{proof}
+For any basepoint in $p^{-1} X^{\prime}$ we have a diagram
+$$
+\xymatrix{
+\pi_1 (p^{-1}X^{\prime}) \ar@{^{(}->}[d] \ar[r] &\pi_1 \widetilde{X}\ar@{^{(}->}[d]\\
+\pi^{\prime} \ar@{^{(}->}[r] & \pi}
+$$
+where the vertical maps are induced by $p$ and the horizontal maps by inclusions. since $\pi_{1} \tilde{X}=\{1\},$ the first assertion follows at once. From the definition of the action given by the fundamental group of the base space on the cover we obtain the second assertion.
+\end{proof}
+
+\begin{lemma}
+\label{lemma3}
+Any diagram $G_{1} \leftarrow A \rightarrow G_{2}$ of groups can be realized by a $\operatorname{diagram} X_{1} \hookleftarrow  Y \hookrightarrow X_{2}$ of $K(\pi, 1)$-complexes.
+\end{lemma}
+\begin{proof}
+Since $\mathrm{K}(\pi, 1)$-complexes can be constructed functorially, We can therefore realize the group homomorphisms by cellular maps $X_{1} \leftarrow Y \rightarrow X_{2}$ of $K(\pi, 1)$ 's. Taking mapping cylinders if necessary as in the appendix \ref{inc}, we can make these maps inclusions.
+\end{proof}
+
+\begin{proof}
+Now we can prove theorem \ref{thm2}. Start with $\operatorname{diagram} X_{1} \hookleftarrow  Y \hookrightarrow X_{2}$ as in the above lemma \ref{lemma3} and form the adjunction space $X=X_{1} \cup_{Y} X_{2},$ i.e., $X$ is obtained from the disjoint union $X_{1} \coprod X_{2}$ by identifying the two copies of $Y .$ Then $\pi_{1} X=G_{1} *_{A} G_{2}=G$ by theorem \ref{thm_van}. so we need only show that the universal cover $\tilde{X}$ satisfies $H_{i} \tilde{X}=0$ for $i>1 .$ Let $\tilde{X}_{1}, \tilde{X}_{2}$ and $\tilde{Y}$ be the inverse images of $X_{1}, X_{2},$ and $Y$ in $\tilde{X}$. since $X_{1}, X_{2},$ and $Y$ have acyclic universal covers, it follows from \ref{lemma1} and \ref{lemma2} that $\tilde{X}_{1}, \tilde{X}_{2},$ and $\tilde{Y}$ have trivial homology in positive dimensions. The Mayer-Vietoris sequence associated to the square
+$$
+\xymatrix{
+\widetilde{Y}\ar@{^{(}->}[d] \ar@{^{(}->}[r] &\widetilde{X}_2\ar@{^{(}->}[d]\\
+ \widetilde{X}_1\ar@{^{(}->}[r] & \widetilde{X}}
+$$
+therefore shows that $H_{i} \tilde{X}=0$ for $i>1$
+\end{proof}
+\begin{corollary}
+\label{cor1}
+Given $G=G_{1} *_{A} G_{2}$ where $A \subseteq G_{1}$ and $A\subseteq G_{2},$ there is $a$ "Mayer-Vietoris" sequence
+\[
+\cdots \rightarrow H_{n} A \rightarrow H_{n} G_{1} \oplus H_{n} G_{2} \rightarrow H_{n} G \rightarrow H_{n-1} A \rightarrow \cdots
+\]
+\end{corollary}
+\begin{proof}
+This is immediate from theorem \ref{thm1} and the theorem \ref{thm2}.
+\end{proof}
+
+

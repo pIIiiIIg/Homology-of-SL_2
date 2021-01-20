@@ -1,0 +1,179 @@
+\section{Group Action on a Tree}
+\label{chap3}
+A group action on a graph is a group action on the sets of vertices and edges that respects the edge
+relations. We show in this chapter that the group action on a tree somehow determined the group.
+
+\subsection{Free Actions on Trees}
+We prove in this section the following theorem.
+\begin{theorem}
+\label{3.1}
+If a group \textit{G} acts freely on a tree, then \textit{G} is isomorphic to a free group.
+\end{theorem}
+Our proof of this theorem has three steps. First we find a tiling of the tree that is consistent with the action of $G,$ then we use the tiling to find a generating set for $G,$ and finally we show that the generating set is a free generating set.
+\par\noindent
+\textbf{Step 1: Tiling the tree. }Again, the key to the proof is a certain tiling of our tree
+$T .$ By a tile, we mean a subtree $T_{0}$ of the barycentric subdivision $T^{\prime}$ of $T$ (the barycentric subdivision of a graph is the graph obtained by subdividing each edge; that is, we place a new vertex at the center of each edge of the original graph). And a tiling of $T$ is a collection of tiles with the following properties:
+\par
+ 1. No two tiles share an edge, so two tiles can only intersect at one vertex.
+ \par
+ 2. The union of the tiles is the entire tree $T^{\prime}$.
+ \par\noindent
+Of course we want our tiling to have something to do with the action of $G$ on $T$ (and the induced action on $T^{\prime}$ ), so we will impose one more restriction:\par
+3. There is a single tile $T_{0}$ so that the set of tiles is equal to $\left\{g T_{0} | g \in G\right\}$
+A tiling of $T$ with all three properties could be called a $G$ -tiling of $T .$ Notice that the last condition is really two conditions rolled into one: first we need that each $g T_{0}$ is a tile, and second we need that every tile is of this form.
+\par
+Where can we find a $G$-tiling of $T ?$ Here is an idea. Choose an arbitrary vertex
+$v$ of $T,$ and consider the orbit of $v$ under $G .$ since $G$ acts freely on $T,$ it follows that the points of the orbit are in bijection with the elements of $G$
+\par
+Intuitively, each tile will be the set of points of $T^{\prime}$ that are closest to some vertex
+$g v .$ This doesn't quite make sense because the path metric on $T^{\prime}$ is only defined on the vertices (if you replace $T^{\prime}$ with its geometric realization as in Project $6,$ then this intuitive idea can be made precise).
+\par
+For each element $g$ of $G,$ we take $T_{g}$ to be the subtree of the barycentric subdivision $T^{\prime}$ whose vertex set is the set of vertices $w$ of $T^{\prime}$ so that $d(w, g v) \leq d\left(w, g^{\prime} v\right)$ for all $g^{\prime} \in G$(We define the distance between two points to be the shotest length of the routes) and whose edge set is the set of edges $e$ of $T^{\prime}$ so that both vertices of
+$e$ lie in $T_{g}$ (the distance here is the path metric on $T^{\prime}$ ). We now need to check that the collection $\left\{T_{g}\right\}$ forms a tiling of $T$.
+\begin{claim}
+Each $T_{g}$ is a tile.
+\end{claim}
+\par
+In other words, we want to check that each $T_{g}$ is a subtree of the subdivision $T^{\prime}$ To do this, we need to show that $T_{g}$ is a connected subgraph of $T^{\prime},$ as any connected subgraph of a tree is a tree (since $T^{\prime}$ has no cycles, no subgraph has a cycle).
+\par
+Let $w$ be a vertex of $T_{g} .$ We will show that every vertex of the (unique!) edge path in $T^{\prime}$ from $w$ to $g v$ lies in $T_{g} .$ It follows from this that $T_{g}$ is connected.
+\par
+Say that $d(w, g v)=n .$ Now let $u$ be the first vertex after $w$ on the edge path from
+$w$ to $g v$ in $T^{\prime} .$ Note that $d(u, g v)=n-1$ (convince yourself of this!). If $u$ were not in $T_{g},$ that would mean that there was some $g^{\prime}$ with $d\left(u, g^{\prime} v\right)=m<n-1$ But then $d\left(w, g^{\prime} v\right) \leq m+1<n,$ a contradiction. We have thus shown that each $T_{g}$ is a tile.
+\begin{claim}
+The union of the $T_{g}$ is all of $T^{\prime}$.
+\end{claim}
+It is obvious that every vertex of $T^{\prime}$ lies in some $T_{g},$ as every vertex must be closest to some $g v .$ So it remains to show that each edge of $T^{\prime}$ lies in some $T_{g}$.
+\par
+The key observation is that each edge $e$ of $T^{\prime}$ has one vertex $u$ that comes from $T$ and one vertex $w$ that does not. Thus any edge path alternates between these two types of vertices. In particular, the distance from $u$ to the $G$ -orbit of $v$ is even and the distance from $w$ to the $G-$ orbit of $v$ is odd (in general the distance from a point $x$ to a set $A$ is the infimum of $d(x, a),$ where $a$ is in $A$ ). These two distances are not equal.
+\par
+Suppose that the first distance is the smaller one and that $u$ lies in $T_{g}$. We have assumed that the distance from $w$ to the $G$ -orbit of $v$ is greater than $d(u, g v)$ and by the triangle inequality we have that $d(w, g v) \leq d(u, g v)+1 .$ since the distance from $w$ to the $G$ -orbit of $v$ is an integer, it must be that $d(w, g v)$ equals the distance between $w$ and the $G$ -orbit of $v ;$ in other words, $w$ lies in $T_{g} .$ As $u$ and $w$ both lie in $T_{g},$ it follows that $e$ lies in $T_{g}$ as well, and so we are done.
+\begin{claim}
+For each $g, h \in G,$ we have $g T_{h}=T_{g h}$
+\end{claim}
+By taking $h$ to be the identity element, we obtain the tile $T_{0}$ as in the third condition for $\left\{T_{g}\right\}$ to be a $G$ -tiling. So let's prove this claim. 
+\par
+Since $T_{h}$ and $T_{g h}$ are completely determined by their vertex sets, it is enough to show that $g$ takes the vertex set of $T_{h}$ to the vertex set of $T_{g h} .$ Say that $u$ is a vertex of $T_{h} .$ This means that for any $k \in G,$ we have
+\[
+d(u, h v) \leq d(u, k v)
+\]
+We would like to show that $g u$ is a vertex of $T_{g h} .$ This is the same as saying that
+\[
+d(g u,(g h) v) \leq d(g u, k v)
+\]
+for all $k \in G .$ But $g$ acts by isometries on $T^{\prime},$ and so applying $g^{-1}$ to $T^{\prime}$ we see that this is equivalent to the statement that:
+\[
+d(u, h v) \leq d\left(u,\left(g^{-1} k\right) v\right)
+\]
+for all $k \in G .$ But since multiplication by $g^{-1}$ is a bijection $G \rightarrow G,$ this is the same as saying that
+\[
+d(u, h v) \leq d(u, k v)
+\]
+for all $k \in G .$ This is equivalent to the assumption that $u \in T_{h},$ and so we are done.
+\par\noindent
+\textbf{Step 2: Finding a generating set.} We have our action of the group $G$ on the tree $T,$ and we have our $G$ -tiling of $T .$ The next step in the proof is to use the tiling in order to find a symmetric generating set $S$ for $G .$ We take
+\[
+S=\left\{g \in G |\left(g T_{0}\right) \cap T_{0} \neq \emptyset\right\}
+\]
+Remember that two tiles can only intersect in a single vertex of $T^{\prime} .$ Therefore, we could replace the condition $\left(g T_{0}\right) \cap T_{0} \neq \emptyset$ with the condition that $\left(g T_{0}\right) \cap T_{0}$ is a single vertex of $T^{\prime}$.
+\par
+We now need to show that our set $S$ really is a symmetric generating set for $G$ First we will show that $S$ is symmetric. So let $s \in S .$ This means that
+\[
+\left(s T_{0}\right) \cap T_{0}=\{w\}
+\]
+for some vertex $w$ of $T^{\prime}$. Applying $s^{-1}$, we immediately conclude that
+\[
+T_{0} \cap\left(s^{-1} T_{0}\right)=\left\{s^{-1}(w)\right\}
+\]
+But this means that $s^{-1} \in S,$ as desired.
+\par
+To finish Step $2,$ we need to show that $S$ generates $G .$ To this end, let $g$ be an arbitrary element of $G .$ We want to write $g$ as a product of elements of $S .$ We would like to use our group action, so we look at the vertex $g v .$ We can draw the unique path from $g v$ back to $v$. We can keep track of the tiles encountered along this path:
+\[
+\begin{aligned}
+T_{g_{n}}, \quad T_{g_{n-1}}, & \cdots, \quad T_{g_{1}}, \quad T_{0}, 
+\text { where } g_{n}=g \text { and } g_{0}=e.
+\end{aligned}
+\]
+\begin{claim}
+Each $g_{i-1}^{-1} g_{i}$ is equal to some $s_{i} \in S$.
+\end{claim}
+Once we prove the claim, it follows easily by induction that
+\[
+g=g_{n}=s_{1} s_{2} \cdots s_{n}
+\]
+and so we will be done. 
+\par
+To prove the claim, notice that if a path travels through tiles $T_{g_{i+1}}$ and $T_{g_{i}}$ without traveling through any tiles in between, then $T_{8_{t+1}} \cap T_{g_{1}}$ must be nonempty (in fact, we know that the intersection is a single vertex). But then applying $g_{i}^{-1},$ we see that
+\[
+\left(g_{i}^{-1} T_{g_{i+1}}\right) \cap\left(g_{i}^{-1} T_{g_{i}}\right)=T_{g_{i}^{-1}g_{i+1}} \cap T_{0}
+\]
+is nonempty. But this means exactly that $g_{i}^{-1} g_{i+1}$ is in $S$, which is what we claimed.
+\par
+\textbf{Step 3: Free generation.} We started with an action of our group $G$ on a tree $T$. We then found a $G$ -tiling of $T,$ and used this to construct a symmetric generating set $S$ for $G .$ It remains to show that $S$ is a free generating set for $G .$ In other words, if we have an element $g$ of $G,$ then there is only one way to write $g$ as a freely reduced product of elements of $S$
+
+Here is how we will do this. Suppose that $g$ is a product of elements of $S$, say
+\[
+g=s_{1} s_{2} \cdots s_{k}
+\]
+that is freely reduced (that is, $s_{i}$ is never equal to $s_{i+1}^{-1}$ ). We will construct a path from $g v$ to $v$ that passes through the following tiles (and no others), in order:
+\[
+T_{g}=T_{s_{1} \cdots s_{k}}, \quad T_{s_{1} \cdots s_{k-1}}, \ldots, T_{s_{1}}, T_{0}
+\]
+If we can do this, we will be done. Why? Because there is a unique (nonbacktracking) path from gv to $v$ in $T,$ and this argument will show that unique path from $g v$ to $v$ completely determines the word $s_{1} s_{2} \cdots s_{k}$ representing $G$ So how do we find the path associated to the product $s_{1} s_{2} \cdots s_{k} ?$ Well, we just reverse the process from before. First we find a path from $v$ to $s_{1} v .$ By definition of $S,$ the tiles $T_{0}$ and $s_{1} T_{0}$ intersect in a single vertex. It follows that the union $T_{0} \cup s_{1} T_{0}$ is a tree! And this means there is a path-unique, by the way-from $v$ to $s_{1} v$ contained in $T_{0} \cup s_{1} T_{0}$
+\par
+To get to $s_{1} s_{2} v$ we continue reversing the process from before. Applying $s_{1}^{-1}$ to $T_{s_{1} s_{2}}$ and $T_{s_{1}},$ and using our rule that $h T_{k}=T_{h k},$ we see that $T_{s_{1} s_{2}} \cap T_{s_{1}}$ is a vertex, and so $T_{s_{1} s_{2}} \cup T_{s_{1}}$ is a tree, and so we can find a path from $s_{1} v$ to $s_{1} s_{2} v$ contained in $T_{s_{1} s_{2}} \cup T_{s_{1}} .$ Continuing inductively, we obtain the desired path. This completes the proof of Theorem \ref{3.1}.
+
+\subsection{Groups Acting on Trees with Nontrivial Vertex Stabilizers}
+We will now see that even if the action is not free, we can often still describe the group using a free product.
+\begin{theorem}.
+\label{3.2}
+Suppose that a group $G$ acts without inversions on a tree $T$ in such a way that $G$ acts freely and transitively on edges. Choose one edge e of $T$ and say that the stabilizers of its vertices are $H_{1}$ and $H_{2} .$ Then
+\[
+G \cong H_{1} * H_{2}
+\]
+\end{theorem}
+Let's see if we can prove this in the same way we proved that a group acting freely on a tree is a free group. What should the $G$-tilings be? In this case, since $G$ acts without inversions we can get away without the barycentric subdivision, so the definition of the tiling is the same as before except that the tiles are subgraphs of $T$ itself. since $G$ acts transitively on the edges, we can take each edge to be a tile. So far so good.
+\par
+Next we need to show that $G$ is generated by $H_{1}$ and $H_{2} .$ Again, let's try the same tactic as before. Let $v_{i}$ be the vertex of $e$ with stabilizer $H_{i}$
+\par
+Let $g$ be any element of $G .$ Last time we considered the path from $g v$ to $v$ for some vertex $v .$ This time our edge $e$ plays a special role, so let's use that. Connect ge to $e$ by a path; this is the unique path obtained by joining any vertex of $g e$ to any vertex of $e$ by a path. 
+\par
+Following along the path, we obtain a sequence of edges
+\[
+g e=e_{n}, \ldots, e_{1}, e_{0}=e
+\]
+By assumption, each $e_{i}$ can be written as $g_{i} e$ for some $g_{i} \in G .$ It follows from the fact that $G$ acts freely on edges that each $g_{i}$ is unique; in particular, $g_{n}=g .$ We will show by induction that $g_{i}$ can be written as a product of elements of $H_{1}$ and
+$H_{2} .$ The base case is $i=0,$ in which case there is nothing to do. 
+\par
+As a warm-up for the inductive step, let's consider the case $i=1 .$ Now, $e_{1}$ and $e_{0}=e$ share one vertex, either $v_{1}$ or $v_{2} ;$ say it is $v_{1} .$ By definition, $g_{1}^{-1} e_{1}=e_{0}$ Therefore, the vertex $v_{1}\left(\text { which is a vertex of } e_{1}\right)$ must get mapped to a vertex of
+$e,$ either $v_{1}$ or $v_{2} .$ But we know $v_{1}$ and $v_{2}$ are in different orbits, so we must have $g_{1}^{-1}\left(v_{1}\right)=v_{1} .$ This is the same as saying that $g_{1}^{-1} \in H_{1},$ or $g_{1} \in H_{1},$ and we are done.
+\par
+The general inductive step is basically the same. We assume that $g_{k}$ can be written as a product of elements of $H_{1}$ and $H_{2}$. Then we consider $e^{\prime}=g_{k}^{-1} e_{k+1}$ since $e_{k}$ and $e_{k+1}$ share a vertex, the edges $e^{\prime}$ and $e$ share a vertex, say $v_{1} .$ Also,
+\[
+\left(g_{k+1}^{-1} g_{k}\right) e^{\prime}=\left(g_{k+1}^{-1} g_{k}\right)\left(g_{k}^{-1} e_{k+1}\right)=e
+\]
+As in the previous paragraph, it follows that $g_{k+1}^{-1} g_{k}$ lies in $H_{1},$ from which it follows that $g_{k+1}$ can be written as a product of elements of $H_{1}$ and $H_{2},$ as desired. 
+\par
+We just showed that we can write any $g \in G$ as an alternating product of elements of $H_{1}$ and $H_{2},$ as per the definition of a free product. To show that $G$ really is a free product of $H_{1}$ with $H_{2},$ we need to show that this is the only such expression for $g .$ Again, we will mimic what we did in the free group case. We will show that if we are given a finite product
+\[
+h_{1} k_{1} \cdots=g
+\]
+then we can recover the path from $e$ to $g e$ we studied above. The first edge in the path, of course, is $e .$ The second edge is $h_{1} e .$ Because $h_{1} v_{1}=v_{1}$ by definition, the edge $h_{1} e$ shares the vertex $v_{1}$ with $e .$ Next, we show that $\left(h_{1} k_{1}\right) e$ shares a vertex with the previous edge, $h_{1} e .$ Applying $h_{1}^{-1}$ to both, we obtain $k_{1} e$ and $e,$ which share the vertex $v_{2}$. Therefore, $\left(h_{1} k_{1}\right) e$ and $h_{1} e$ share the vertex $h_{1} v_{2}$. Continuing inductively, the sequence of edges $e, h_{1} e,\left(h_{1} k_{1}\right) e,$ etc. is a path in $T$ starting with $e$ and ending with $g e$.
+\par
+To summarize, a path in $T$ from $e$ to ge gives a unique alternating word in the elements of $H_{1}$ and $K_{1},$ and an alternating word in the elements of $H_{1}$ and $K_{1}$ gives a unique path in $T$ from $e$ to $g v .$ But there is only one path from $e$ to $g e,$ and so it follows that there is only one word!
+
+\subsection{Group Actions on Trees and Free Products with Amalgamation}
+Mimic the proof of theorem \ref{3.2} we easily deduce the following theorem for amalgamated free products.
+\begin{theorem}
+\label{thm3.3}
+Suppose that a group G acts without inversions on a tree T in such a way that $G$ acts transitively on edges. Choose one edge of $T$ and say that the stabilizer of this edge is $K$ and that the stabilizers of its vertices are $H_{1}$ and $H_{2}$. Then
+\[
+G \cong H_{1} *_{K} H_{2}
+\]
+where the maps $j_i:K \rightarrow H_{i}$ are the inclusions of the edge stabilizer into the two vertex
+stabilizers.
+\end{theorem}
+\begin{proof}
+The uniqueness is left to be shown. But the only difference when we do induction is by adding into $j_1(k)j_2(k)^{-1}$ or its inverse between the alternating elements in $H_1$ and $H_2$.
+\end{proof}
+

@@ -1,0 +1,27 @@
+The Homology of Amalgamated Free Products.tex:43:11: Error: `)' expected, found `}'. Y \ar@{^{(}->}[d] \ar@{^{(}->}[r] &X_2\ar@{^{(}->}[d]\\  
+The Homology of Amalgamated Free Products.tex:43:27: Error: `)' expected, found `}'. Y \ar@{^{(}->}[d] \ar@{^{(}->}[r] &X_2\ar@{^{(}->}[d]\\  
+The Homology of Amalgamated Free Products.tex:43:47: Error: `)' expected, found `}'. Y \ar@{^{(}->}[d] \ar@{^{(}->}[r] &X_2\ar@{^{(}->}[d]\\  
+The Homology of Amalgamated Free Products.tex:44:13: Error: `)' expected, found `}'.  X_1\ar@{^{(}->}[r] & X}  
+The Homology of Amalgamated Free Products.tex:65:34: Error: `)' expected, found `}'. \pi_1 (p^{-1}X^{\prime}) \ar@{^{(}->}[d] \ar[r] &\pi_1 \widetilde{X}\ar@{^{(}->}[d]\\  
+The Homology of Amalgamated Free Products.tex:65:77: Error: `)' expected, found `}'. \pi_1 (p^{-1}X^{\prime}) \ar@{^{(}->}[d] \ar[r] &\pi_1 \widetilde{X}\ar@{^{(}->}[d]\\  
+The Homology of Amalgamated Free Products.tex:66:22: Error: `)' expected, found `}'. \pi^{\prime} \ar@{^{(}->}[r] & \pi}  
+The Homology of Amalgamated Free Products.tex:83:22: Error: `)' expected, found `}'. \widetilde{Y}\ar@{^{(}->}[d] \ar@{^{(}->}[r] &\widetilde{X}_2\ar@{^{(}->}[d]\\  
+The Homology of Amalgamated Free Products.tex:83:38: Error: `)' expected, found `}'. \widetilde{Y}\ar@{^{(}->}[d] \ar@{^{(}->}[r] &\widetilde{X}_2\ar@{^{(}->}[d]\\  
+The Homology of Amalgamated Free Products.tex:83:70: Error: `)' expected, found `}'. \widetilde{Y}\ar@{^{(}->}[d] \ar@{^{(}->}[r] &\widetilde{X}_2\ar@{^{(}->}[d]\\  
+The Homology of Amalgamated Free Products.tex:84:25: Error: `)' expected, found `}'.  \widetilde{X}_1\ar@{^{(}->}[r] & \widetilde{X}}  
+appendix.tex:19:34: Error: `)' expected, found `}'. A \ar[d]^{id} \ar[r]^f &B\ar@{^{(}->}[d]^{\text{homotopy equivalence}}\\  
+appendix.tex:20:10: Error: `)' expected, found `}'. A\ar@{^{(}->}[r] & M_f}  
+appendix.tex:19:30: Warning: No match found for `{'. A \ar[d]^{id} \ar[r]^f &B\ar@{^{(}->}[d]^{\text{homotopy equivalence}}\\  
+appendix.tex:18:10: Warning: No match found for `{'. \xymatrix{  
+Fareytree.tex:82:232: Warning: No match found for `('. For a fraction $a/b$ in lowest terms labeling on a point of the Farey Tree, we can equivalently write it as a representative $\pm(a,b)$. In this way we obtain an action of $SL_2(\mathbb{Z})$ on Farey graph by matrix multiplication (It is easy to check that the action on vertices preserves adjacency and non-adjacency  of vertices with help from proposition \ref{prop3.1}. Also, the action of $SL_2(\mathbb{Z})$ on the Farey graph induces an action on the Farey complex, meaning that the action on the graph takes the boundary of a triangle to the boundary of a triangle: Let $A\in SL_2(\mathbb{Z})$, then  
+The Homology of Amalgamated Free Products.tex:83:66: Warning: No match found for `{'. \widetilde{Y}\ar@{^{(}->}[d] \ar@{^{(}->}[r] &\widetilde{X}_2\ar@{^{(}->}[d]\\  
+The Homology of Amalgamated Free Products.tex:83:34: Warning: No match found for `{'. \widetilde{Y}\ar@{^{(}->}[d] \ar@{^{(}->}[r] &\widetilde{X}_2\ar@{^{(}->}[d]\\  
+The Homology of Amalgamated Free Products.tex:83:18: Warning: No match found for `{'. \widetilde{Y}\ar@{^{(}->}[d] \ar@{^{(}->}[r] &\widetilde{X}_2\ar@{^{(}->}[d]\\  
+The Homology of Amalgamated Free Products.tex:82:10: Warning: No match found for `{'. \xymatrix{  
+The Homology of Amalgamated Free Products.tex:65:73: Warning: No match found for `{'. \pi_1 (p^{-1}X^{\prime}) \ar@{^{(}->}[d] \ar[r] &\pi_1 \widetilde{X}\ar@{^{(}->}[d]\\  
+The Homology of Amalgamated Free Products.tex:65:30: Warning: No match found for `{'. \pi_1 (p^{-1}X^{\prime}) \ar@{^{(}->}[d] \ar[r] &\pi_1 \widetilde{X}\ar@{^{(}->}[d]\\  
+The Homology of Amalgamated Free Products.tex:64:10: Warning: No match found for `{'. \xymatrix{  
+The Homology of Amalgamated Free Products.tex:43:43: Warning: No match found for `{'. Y \ar@{^{(}->}[d] \ar@{^{(}->}[r] &X_2\ar@{^{(}->}[d]\\  
+The Homology of Amalgamated Free Products.tex:43:23: Warning: No match found for `{'. Y \ar@{^{(}->}[d] \ar@{^{(}->}[r] &X_2\ar@{^{(}->}[d]\\  
+The Homology of Amalgamated Free Products.tex:43:7: Warning: No match found for `{'. Y \ar@{^{(}->}[d] \ar@{^{(}->}[r] &X_2\ar@{^{(}->}[d]\\  
+The Homology of Amalgamated Free Products.tex:42:10: Warning: No match found for `{'. \xymatrix{  

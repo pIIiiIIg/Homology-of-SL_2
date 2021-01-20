@@ -1,0 +1,24 @@
+\expandafter\ifx\csname doTocEntry\endcsname\relax \expandafter\endinput\fi 
+\doTocEntry\toclikesection{}{\csname a:TocLink\endcsname{1}{x1-1000}{QQ2-1-1}{Contents}}{3}\relax 
+\doTocEntry\tocsection{1}{\csname a:TocLink\endcsname{1}{x1-20001}{QQ2-1-2}{Introduction}}{4}\relax 
+\doTocEntry\tocsection{2}{\csname a:TocLink\endcsname{1}{x1-30002}{QQ2-1-3}{The Homology of a Group}}{4}\relax 
+\doTocEntry\tocsubsection{2.1}{\csname a:TocLink\endcsname{1}{x1-40002.1}{QQ2-1-4}{The Definition of $H_\ast G$}}{4}\relax 
+\doTocEntry\tocsubsection{2.2}{\csname a:TocLink\endcsname{1}{x1-50002.2}{QQ2-1-5}{Topological Interpretation}}{7}\relax 
+\doTocEntry\tocsubsection{2.3}{\csname a:TocLink\endcsname{1}{x1-60002.3}{QQ2-1-6}{The Homology of Amalgamated Free Products}}{12}\relax 
+\doTocEntry\tocsection{3}{\csname a:TocLink\endcsname{1}{x1-70003}{QQ2-1-7}{Group Action on a Tree}}{19}\relax 
+\doTocEntry\tocsubsection{3.1}{\csname a:TocLink\endcsname{1}{x1-80003.1}{QQ2-1-8}{Free Actions on Trees}}{19}\relax 
+\doTocEntry\tocsubsection{3.2}{\csname a:TocLink\endcsname{1}{x1-90003.2}{QQ2-1-9}{Groups Acting on Trees with Nontrivial Vertex Stabilizers}}{31}\relax 
+\doTocEntry\tocsubsection{3.3}{\csname a:TocLink\endcsname{1}{x1-100003.3}{QQ2-1-10}{Group Actions on Trees and Free Products with Amalgamation}}{35}\relax 
+\doTocEntry\tocsection{4}{\csname a:TocLink\endcsname{1}{x1-110004}{QQ2-1-11}{The Homology of $SL_2(\mathbb  {Z})$ }}{37}\relax 
+\doTocEntry\tocsubsection{4.1}{\csname a:TocLink\endcsname{1}{x1-120004.1}{QQ2-1-12}{The Farey Tree}}{37}\relax 
+\doTocEntry\toclof{1}{\csname a:TocLink\endcsname{1}{x1-120011}{}{\ignorespaces Farey Graph}}{figure}\relax 
+\doTocEntry\toclof{2}{\csname a:TocLink\endcsname{1}{x1-120052}{}{\ignorespaces The Farey tree superimposed on the Farey complex.}}{figure}\relax 
+\doTocEntry\tocsubsection{4.2}{\csname a:TocLink\endcsname{1}{x1-130004.2}{QQ2-1-15}{$SL_2(\mathbb  {Z})$-action on the Farey tree}}{45}\relax 
+\doTocEntry\tocsubsection{4.3}{\csname a:TocLink\endcsname{1}{x1-140004.3}{QQ2-1-16}{The Homology of $SL_2(\mathbb  {Z})$}}{51}\relax 
+\doTocEntry\toclof{3}{\csname a:TocLink\endcsname{1}{x1-140023}{}{\ignorespaces $\mathbb  {Z} / 2\DOTSB \lhook \joinrel  \rightarrow \mathbb  {Z} /4$}}{figure}\relax 
+\doTocEntry\tocsection{A}{\csname a:TocLink\endcsname{1}{x1-15000A}{QQ2-1-18}{Basic Bricks of the Trade}}{56}\relax 
+\doTocEntry\tocsubsection{A.1}{\csname a:TocLink\endcsname{1}{x1-16000A.1}{QQ2-1-19}{Inclusion}}{56}\relax 
+\doTocEntry\toclof{4}{\csname a:TocLink\endcsname{1}{x1-160014}{}{\ignorespaces mapping cylinder}}{figure}\relax 
+\doTocEntry\tocsubsection{A.2}{\csname a:TocLink\endcsname{1}{x1-17000A.2}{QQ2-1-21}{Fibering}}{59}\relax 
+\doTocEntry\toclikesection{}{\csname a:TocLink\endcsname{1}{x1-18000A.2}{QQ2-1-22}{References}}{61}\relax 
+\par 

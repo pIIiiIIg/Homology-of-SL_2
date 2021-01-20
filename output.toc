@@ -1,0 +1,16 @@
+\contentsline {section}{\numberline {1}Introduction}{2}{section.1}%
+\contentsline {section}{\numberline {2}The Homology of a Group}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}The Definition of $H_\ast G$}{2}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Topological Interpretation}{3}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}The Homology of Amalgamated Free Products}{5}{subsection.2.3}%
+\contentsline {section}{\numberline {3}Group Action on a Tree}{7}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Free Actions on Trees}{7}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Groups Acting on Trees with Nontrivial Vertex Stabilizers}{10}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Group Actions on Trees and Free Products with Amalgamation}{12}{subsection.3.3}%
+\contentsline {section}{\numberline {4}The Homology of $SL_2(\mathbb {Z})$ }{13}{section.4}%
+\contentsline {subsection}{\numberline {4.1}The Farey Tree}{13}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}$SL_2(\mathbb {Z})$-action on the Farey tree}{15}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}The Homology of $SL_2(\mathbb {Z})$}{18}{subsection.4.3}%
+\contentsline {section}{\numberline {A}Basic Bricks of the Trade}{19}{appendix.A}%
+\contentsline {subsection}{\numberline {A.1}Inclusion}{20}{subsection.A.1}%
+\contentsline {subsection}{\numberline {A.2}Fibering}{20}{subsection.A.2}%

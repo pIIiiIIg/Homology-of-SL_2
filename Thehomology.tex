@@ -1,0 +1,82 @@
+\section{The Homology of a Group}
+\subsection{The Definition of $H_\ast G$}
+\label{chap2.1}
+\begin{definition}
+Let $G$ be a group and $\varepsilon: F \rightarrow \mathbb{Z}$ a projective resolution of $\mathbb{Z}$ over $\mathbb{Z} G$. We define the homology groups of $G$ by
+\[
+H_{i} G=H_{i}\left(F_{G}\right)
+\]
+where $M_{G}=M\otimes_{\mathbb{Z}G}\mathbb{Z}$ is the group of co-invariants of a $G$-module $M$.
+\end{definition}
+We need to examine that the right-hand side is independent of the choice of resolution, up to canonical isomorphism. 
+\begin{theorem}
+Given projective resolutions $F$ and $F^{\prime}$ of a module $M,$ there is an augmentation-preserving chain map $f: F \rightarrow F^{\prime},$ unique up to homotopy, and $f$
+is a homotopy equivalence.
+\end{theorem}
+\begin{proof}
+See \cite{brown2012cohomology}cf.I(7.5)
+\end{proof}
+
+Therefore we can compute the homology of a group via any resolution. 
+
+\begin{example}
+\label{example1}
+suppose $G$ is a finite cyclic group of order $n$. Using the resolution
+\[
+\ldots \stackrel{t-1}{\longrightarrow} \mathbb{Z} G \stackrel{N}{\rightarrow} \mathbb{Z} G \stackrel{t-1}{\longrightarrow} \mathbb{Z} G \rightarrow \mathbb{Z} \rightarrow 0
+\]
+We obtain the complex
+\[
+\cdots \stackrel{0}{\rightarrow} \mathbb{Z} \stackrel{n}{\rightarrow} \mathbb{Z} \stackrel{0}{\rightarrow} \mathbb{Z}
+\]
+Thus
+\[
+H_{i} G \simeq \left\{\begin{array}{ll}
+\mathbb{Z} & i=0 \\
+\mathbb{Z}_{n} & i \text { odd } \\
+0 & i \text { even }
+\end{array}\right.
+\]
+\end{example}
+
+\subsection{Topological Interpretation}
+Via the complex of $K(G,1)$ space we can get a free resolution over $\mathbb{Z}G$. We will prove the following in this section:
+\begin{theorem}
+\label{thm1}
+If $Y$ is a $K(G,1)$-complex then $H_\ast G\simeq H_\ast Y $
+\end{theorem}
+We begin with some definitions
+\begin{definition}
+By a $G$-complex we will mean a CW-complex X together with an action of G on X which permutes the cells.
+\end{definition}
+Thus we have for each $g \in G$ a homeomorphism $x \mapsto g x$ of $X$ such that the image $g \sigma$ of any cell $\sigma$ of $X$ is again a cell. For example, if $X$ is a simplicial complex on which $G$ acts simplicially, then $X$ is a $G$-complex.
+\par
+If $X$ is a $G$-complex then the action of $G$ on $X$ induces an action of $G$ on the cellular chain complex $C_{*}(X),$ which thereby becomes a chain complex of $G$ -modules. Moreover, the canonical augmentation $\varepsilon: C_{0}(X) \rightarrow \mathbb{Z}$ (defined by $\varepsilon(v)=1$ for every 0 -cell $v$ of $X$ ) is a map of $G$ -modules.
+\par
+\begin{definition}
+$X$ is a free $G$-complex if the action of $G$ freely permutes the cells of $X$ (i.e., $g \sigma \neq \sigma$ for all $\sigma$ if $g \neq 1$ ). 
+\end{definition}
+In this case each chain module $C_{n}(X)$ has a $\mathbb{Z}$ -basis which is freely permuted by $G,$ hence $ C_{n}(X)$ is a free $\mathbb{Z} G$ -module with one basis element for every $G$-orbit of cells. 
+\par
+Finally, if $X$ is contractible, then $H_{*}(X) \approx H_{*}(\mathrm{pt} .) ;$ in other words, the sequence
+\[
+\cdots \rightarrow C_{n}(X) \stackrel{\partial}{\rightarrow} C_{n-1}(X) \rightarrow \cdots \rightarrow C_{0}(X) \stackrel{\varepsilon}{\rightarrow} \mathbb{Z} \rightarrow 0
+\]
+is exact. We have, therefore:
+\begin{proposition}
+\label{prop1}
+Let $X$ be a contractible free $G$-complex. Then the augmented cellular chain complex of $X$ is a free resolution of $\mathbb{Z}$ over $\mathbb{Z} G$
+\end{proposition}
+If $Y$ is a $K(G, 1)$ then the universal cover $p: X \rightarrow Y$ is a regular cover(i.e. the deck transformations act transitively on the fibre) whose group of deck transformations is isomorphic to $\pi_{1} Y=G$.  We therefore obtain from proposition \ref{prop1}:
+\begin{proposition}
+If $Y$ is a $K(G, 1)$ then the augmented cellular chain complex of the universal cover of $Y$ is a free resolution of $\mathbb{Z}$ over $\mathbb{Z} G$
+\end{proposition}
+Now we move to the key lemma:
+\begin{lemma}
+Let $X$ be a free $G$-complex and let $Y$ be the orbit complex
+$X / G .$ Then $C_{*}(Y) \approx C_{*}(X)_{G}$.
+\end{lemma}
+\begin{proof}
+The projection $C_{*}(X) \rightarrow C_{*}(Y)$ induces by passage to the quotient $\operatorname{arap} \varphi: C_{*}(X)_{G} \rightarrow C_{*}(Y) .$ Now $C_{*}(X)_{G}$ has a $\mathbb{Z}$-basis with one basis element for each $G$-orbit of cells of $X$(According to the definition, If $F$ is a free $\mathbb{Z} G$ -module with basis $\left(e_{i}\right),$ then $F_{G}$ is a free $\mathbb{Z}$-module with basis $\left(\bar{e}_{i}\right)$). But $C_{*}(Y)$ also has a $\mathbb{Z}$ -basis with one element for each $G$-orbit of cells of $X,$ and it is clear that $\varphi$ maps a basis element of $C_{*}(X)_{G}$ to the corresponding basis element of $C_{*}(Y),$ hence $\varphi$ is an isomorphism.
+\end{proof}
+Let X be the universal cover of Y, the $K(G,1)$-complex, then we have $C_{*}(Y) \approx C_{*}(X)_{G}$ and thus proved the theorem \ref{thm1}.
